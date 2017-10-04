@@ -1,0 +1,309 @@
+
+/* Mastergrid, oppsett til siden */
+div#mastergrid
+  {	  
+      max-width: 1400px;
+	  max-height: 100%;
+      margin: 0 auto;
+	
+	  display: grid;
+	  grid-example-columns: 150px 1fr 1fr 250px;
+	  grid-example-rows: 150px auto auto auto 75px;
+	  grid-template-areas:    "header header header header"
+	                        "nav article1 article2 maininfo"
+							"nav article3 article4 timeplan"
+							"nav article5 article6 ressurser"
+	     					"footer footer footer footer";
+							
+  }
+  
+body
+  {
+	  background-color: white;
+  }
+
+  
+/* Header */
+header
+  {
+	  grid-area: header;
+	  background-color: #225F6F;
+	  color: white;
+	  border: 1.75px solid #116666;
+	  text-align: center;
+      height: 75px;
+	  overflow: hidden;
+	  padding: 2px 4px;
+	  border-radius: 34px;
+	  font-family: verdana;
+  }
+  
+
+/* Nav */
+nav
+  {
+	  grid-area: nav;
+	  background-color: #447777;
+	  color: white;
+	  border: thin solid #116666;
+	  text-align: center;
+	  width: 150px;
+	  padding: 4px 0px;
+	  margin: 6px 0px 6px 0px;
+	  border-radius: 10px;
+  }
+  
+nav h3
+  {
+	  margin-bottom: -6px;
+	  font-family: verdana;
+  }
+  
+nav p
+  {
+	  font-size: 14px;
+  }
+  
+nav #nav-links li a
+  {
+	  font-size: 13px;
+	  color: gold;
+	  float: left;  
+	  margin-left: -4px;
+  }
+  
+  
+nav #nav-links a:hover
+  {
+	  color: lightblue;
+  }  
+
+  
+/* Artikler - Første rad */
+#articleId1
+  {
+	  grid-area: article1;
+  }
+  
+#articleId2
+  {
+	  grid-area: article2;
+  }
+  
+
+/* Artikler - Andre rad */
+#articleId3
+  {
+	  grid-area: article3;
+	  
+  }
+  
+#articleId4
+  {
+	  grid-area: article4;
+  }
+  
+  
+/* Artikler - Tredje rad */
+#articleId5
+  {
+	  grid-area: article5;
+  }
+  
+#articleId6
+  {
+	  grid-area: article6;
+  }
+   
+
+.articleClass
+  {
+	  text-align: center;
+	  margin: 2px;
+	  background-color: white;
+	  border: thick solid #9F9F9F;
+	  border-radius: 10px;
+	  max-height: 145px;
+  }  
+  
+  
+.articleClass h2
+  {
+	  font-size: 16px;
+	  font-family: verdana;
+  }
+  
+  
+.articleClass h2 a
+  {
+	  text-decoration: none;
+	  color: blue;
+	  transition-property: color;
+      transition-duration: 0.75s;
+      transition-timing-function: linear;
+  }
+  
+.articleClass h2 a:hover
+  {
+	  text-decoration: underline;
+	  color: red;
+  }
+  
+  
+.articleClass p
+  {
+	  font-size: 12px;
+	  font-family: calibri;
+  }
+  
+
+
+  
+/* Viktig info, ligger på siden av nettsiden */
+section
+  {
+	  grid-area: maininfo;
+      border: 1.25px solid #116666;
+	  margin: 6px 0px 0px 6px;
+	  width: 250px;
+	  text-align: center;
+	  background-color: #447777;
+	  color: white;
+	  border-radius: 8px;
+  }
+  
+section h3
+  {
+	  margin-bottom: -6px;
+	  font-family: verdana;
+  }
+  
+section p
+  {
+	  font-size: 13px;
+  }
+  
+section a
+
+  {
+	  font-size: 15px;
+	  color: gold;
+  }
+  
+section a:hover
+
+  {
+	  color: lightblue;
+  }
+  
+
+/* Section for timeplan */
+#timeplan
+  {
+	  grid-area: timeplan;
+	  width: 250px;
+	  height: 150px;
+	  overflow: scroll;
+  }
+
+#timeplan img
+  {
+	  width: 400px;
+	  height: 325px;
+  }
+
+
+/* Section for ressurser som ble brukt i både Infprog og Webutvikling */
+#ressurser
+  {
+	  grid-area: ressurser;
+	  text-align: center;
+	  margin-bottom: 6px;
+	  
+  }
+
+#ressurser h4
+  {
+	  margin-top: 10px;
+	  margin-bottom: -8px;
+	  font-family: verdana;
+  }  
+  
+#ressurser #resource-links a
+  {
+	   font-size: 16px;
+  }
+  
+
+/* Footer meny med diverse informasjon */
+footer
+  {
+	  grid-area: footer;
+	  background-color: #883344;
+	  color: white;
+	  border: 1.5px solid black;
+	  height: 45px;
+	  border-radius: 8px;
+	  width: 925px;
+	  height: 40px;
+	  margin: auto;
+  }
+  
+footer #henrik
+  {
+	  font-size: 11px;
+	  font-family: calibri;
+	  font-style: italic;
+	  float: left;
+	  padding-left: 26px;
+  }
+  
+footer #email
+  {
+	  font-size: 11px;
+	  font-family: calibri;
+	  font-style: italic;
+	  float: left;
+	  padding-left: 26px;
+  }  
+  
+footer #tlf
+  {
+	  font-size: 11px;
+	  font-family: calibri;
+	  font-style: italic;
+	  float: left;
+	  padding-left: 26px;
+  } 
+  
+footer #sideinfo
+  {
+	  font-size: 12px;
+	  font-family: calibri;
+	  font-style: italic;
+	  float: right;
+	  padding-right: 26px;
+  }  
+  
+footer #sideinfo a
+  {
+	  color: gold;
+	  transition-property: color;
+      transition-duration: 0.75s;
+      transition-timing-function: linear;
+  }
+  
+footer #sideinfo a:hover
+  {
+	  color: lightblue;
+  }
+  
+/* Gir en myk overgang for alle linker */
+a  
+  {
+	  transition-property: color;
+      transition-duration: 0.5s;
+      transition-timing-function: linear;
+    	
+  }
+  
